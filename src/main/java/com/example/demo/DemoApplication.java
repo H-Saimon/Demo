@@ -1,14 +1,12 @@
 package com.example.demo;
 
 import com.example.demo.entities.Student;
-import com.example.demo.interfaces.IStudentRepository;
 import com.example.demo.repositories.StudentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.sql.SQLOutput;
 import java.util.List;
 
 @SpringBootApplication
@@ -22,12 +20,13 @@ public class DemoApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(StudentRepository studentRepository) {
 		return runner -> {
-			//sabeStudent(new Student("primeiro nome teste","segundo nome teste", "email teste"), studentRepository);
+			//sabeStudent(new Student("eu nome teste","segundo nome teste", "email teste"), studentRepository);
 			//getStudent(1, studentRepository);
 			//getAllStudent(studentRepository);
 			//getByLastName("se", studentRepository);
 			//updateStudent(1, studentRepository);
-			deleteById(1, studentRepository);
+			//deleteById(1, studentRepository);
+			deletAll(studentRepository);
 
 		};
 	}
@@ -66,6 +65,10 @@ public class DemoApplication {
 
 	private void deleteById(int id, StudentRepository studentRepository) {
 		studentRepository.deleteById(id);
+	}
+
+	private void deletAll(StudentRepository studentRepository){
+		studentRepository.deleteAll();
 	}
 
 }

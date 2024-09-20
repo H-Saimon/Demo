@@ -62,9 +62,10 @@ public class StudentRepository implements IStudentRepository {
     }
 
     @Override
+    @Transactional
     public void deleteById(int id) {
         Query query = entityManager
-                .createQuery("delete from Student WHERE id = :id", Student.class);
+                .createQuery("delete from Student WHERE id = :id");
 
         query.setParameter("id", id);
 
@@ -73,10 +74,10 @@ public class StudentRepository implements IStudentRepository {
     }
 
     @Override
+    @Transactional
     public void deleteAll() {
-        TypedQuery<Student> query = entityManager
-                .createQuery("delete from Student s", Student.class);
-
+        Query query = entityManager
+                .createQuery("delete from Student s");
         query.executeUpdate();
 
     }
