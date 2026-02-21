@@ -1,95 +1,103 @@
-# Demo
+```markdown
+# 🚀 Demo
 
-## Descrição
+---
 
-Projeto de demonstração utilizando Spring Boot. Este projeto tem como objetivo apresentar uma aplicação base configurada com as melhores práticas para desenvolvimento de aplicações web com Java e Spring Boot.
+## 📖 Descrição do Projeto
 
-## Funcionalidades Principais
+O **Demo** é um projeto desenvolvido para demonstrar a estruturação e execução de uma aplicação Java baseada em Maven. Com foco em boas práticas de desenvolvimento, este repositório serve como ponto de partida para projetos que utilizam o ecossistema Java, proporcionando uma base sólida para construção, testes e deploy.
 
-- Aplicação web em Spring Boot configurada para desenvolvimento rápido
-- Estrutura modular que possibilita fácil expansão e manutenção
-- Suporte a testes automatizados
-- Configuração padrão para gerenciamento de dependências com Maven
+Este projeto contém uma organização clara de pastas e arquivos essenciais para garantir manutenção fácil, extensibilidade e integração com ferramentas de automação.
 
-## Tecnologias Utilizadas
+---
 
-- Java 17
-- Spring Boot 3.3.3
-- Maven (gerenciador de dependências e build)
+## 🛠️ Tecnologias Utilizadas
 
-## Como Instalar e Rodar
+[![Java](https://img.shields.io/badge/Java-17-blue?logo=java&style=for-the-badge)](https://www.java.com/)
+[![Maven](https://img.shields.io/badge/Maven-3.8.6-red?logo=apache-maven&style=for-the-badge)](https://maven.apache.org/)
+[![JUnit](https://img.shields.io/badge/JUnit-5.9.3-green?logo=junit5&style=for-the-badge)](https://junit.org/junit5/)
 
-1. **Pré-requisitos:**
-   - Java JDK 17 instalado
-   - Maven instalado ou utilizar o wrapper Maven fornecido no projeto
+* **Java 17** – Linguagem principal do projeto
+* **Apache Maven** – Gerenciamento de dependências e build
+* **JUnit 5** – Framework para testes unitários
 
-2. **Clonar o repositório:**
+---
 
-   ```bash
-   git clone <URL_DO_REPOSITÓRIO>
-   cd demo
-   ```
+## ⚙️ Funcionalidades Principais
 
-3. **Compilar o projeto:**
+- Estrutura base para projetos Java com Maven.
+- Scripts automatizados para build e execução (`mvnw` e `mvnw.cmd`).
+- Diretórios organizados para código-fonte e testes.
+- Compatibilidade com execução local e integração contínua.
+- Documentação de suporte com arquivo `HELP.md`.
 
-   Usando Maven instalado:
+---
 
-   ```bash
-   mvn clean install
-   ```
-
-   Ou usando o wrapper Maven (Linux/macOS):
-
-   ```bash
-   ./mvnw clean install
-   ```
-
-   Ou no Windows:
-
-   ```bash
-   mvnw.cmd clean install
-   ```
-
-4. **Executar a aplicação:**
-
-   Com Maven:
-
-   ```bash
-   mvn spring-boot:run
-   ```
-
-   Ou com wrapper:
-
-   ```bash
-   ./mvnw spring-boot:run
-   ```
-
-   Ou executar o JAR gerado no diretório `target`:
-
-   ```bash
-   java -jar target/demo-0.0.1-SNAPSHOT.jar
-   ```
-
-5. **Acessar a aplicação:**
-
-   Por padrão, estará rodando em `http://localhost:8080`
-
-## Estrutura do Projeto
+## 🗂️ Estrutura de Pastas
 
 ```
-├── HELP.md                 # Documento auxiliar com informações adicionais
-├── mvnw                    # Wrapper Maven para Linux/macOS
-├── mvnw.cmd                # Wrapper Maven para Windows
-├── pom.xml                 # Configuração do Maven e dependências do projeto
+├── HELP.md              # Documentação de ajuda do projeto
+├── README.md            # Este arquivo de documentação
+├── mvnw                 # Wrapper do Maven para Linux/macOS
+├── mvnw.cmd             # Wrapper do Maven para Windows
+├── pom.xml              # Arquivo de configuração Maven
 ├── src
-│   ├── main
-│   │   ├── java            # Código-fonte principal Java
-│   │   └── resources       # Configurações e arquivos estáticos
-│   └── test                # Testes automatizados
-└── target                  # Diretório gerado pelo Maven com artefatos compilados
-    └── classes             # Classes compiladas
+│   ├── main             # Código fonte principal
+│   │   └── java         # Código Java
+│   └── test             # Código para testes automatizados
+│       └── java         # Testes em Java
+└── target               # Resultados do build / artefatos compilados
+    └── classes          # Classes compiladas
 ```
 
 ---
 
-Este projeto serve como base para o desenvolvimento de aplicações Spring Boot e pode ser facilmente estendido para atender às necessidades específicas de seu sistema.
+## ▶️ Como Executar o Projeto
+
+### Pré-requisitos
+
+- Java 17 instalado e configurado no PATH
+- Maven instalado (opcional, pois o wrapper está incluso)
+- Sistema operacional: Windows, macOS ou Linux
+
+### Passos para execução
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/H-Saimon/Demo.git
+   cd Demo
+   ```
+
+2. Compile o projeto usando o wrapper Maven:
+   - No Linux/macOS:
+     ```bash
+     ./mvnw clean install
+     ```
+   - No Windows:
+     ```cmd
+     mvnw.cmd clean install
+     ```
+
+3. Execute os testes automatizados:
+   ```bash
+   ./mvnw test
+   ```
+
+4. Caso exista um arquivo `.jar` gerado no diretório `target`, execute com:
+   ```bash
+   java -jar target/seu-artefato.jar
+   ```
+   *(Substitua `seu-artefato.jar` pelo nome correto gerado pelo Maven)*
+
+---
+
+## ✍️ Autor
+
+**Hítalon Saimon**  
+GitHub: [H-Saimon](https://github.com/H-Saimon)  
+Email: (adicione seu email aqui, se desejar)
+
+---
+
+> Projeto mantido por Hítalon Saimon – em constante evolução para melhor atender a comunidade Java.
+```
